@@ -32,9 +32,7 @@ exports.validateSignup = data => {
 };
 exports.validateLogin = (email, password) => {
   let errors = {};
-  if (!password || !email) {
-    return res.status(403).json({ message: "Must not be empty" });
-  }
+ 
   if (isEmpty(email)) {
     errors.email = "Must not be empty";
   }
